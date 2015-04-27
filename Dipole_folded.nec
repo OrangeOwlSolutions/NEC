@@ -1,0 +1,17 @@
+CM 	
+CE
+SY L2=0.4836	'Folded Dipole Overall Element Length
+SY FW=0.04	'Distance between Folded Dipole Elements
+SY RACT=0.0001	'Radius (inches) for Driven Element
+GW	1	9	0	-L2/2	0	0	L2/2	0	RACT
+GW	2	9	0	-L2/2	FW	0	L2/2	FW	RACT
+GW	3	2	0	L2/2	0	0	L2/2	FW	RACT
+GW	4	2	0	-L2/2	0	0	-L2/2	FW	RACT
+GE	0
+LD	5	0	0	0	58000000	'Copper Elements
+GN	-1
+EK
+EX	0	1	5	0	1	0	0	'SOURCE at middle of GW1
+FR	0	0	0	0	300	0
+RP	0	1	73	1510	90	0	1	5	0	0
+EN
