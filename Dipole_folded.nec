@@ -1,12 +1,11 @@
-CM 	
+CM Dipole antenna.
 CE
-SY L2=0.4836	'Folded Dipole Overall Element Length
-SY FW=0.04	'Distance between Folded Dipole Elements
-SY RACT=0.0001	'Radius (inches) for Driven Element
-GW	1	9	0	-L2/2	0	0	L2/2	0	RACT
-GW	2	9	0	-L2/2	FW	0	L2/2	FW	RACT
-GW	3	2	0	L2/2	0	0	L2/2	FW	RACT
-GW	4	2	0	-L2/2	0	0	-L2/2	FW	RACT
+SY len=0.4836	'Symbol: antenna length (2l)
+SY d=0.04	'Symbol: distance between folded dipole elements
+GW	1	9	0	0	-len/2.	0	0	len/2.	0.001
+GW	2	9	d	0	-len/2.	d	0	len/2.	0.001
+GW	3	2	0	0	len/2.	d	0	len/2.	0.001
+GW	4	2	0	0	-len/2.	d	0	-len/2.	0.001
 GE	0
 LD	5	0	0	0	58000000	'Copper Elements
 GN	-1
